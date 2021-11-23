@@ -17,7 +17,7 @@ export class ProcessosService {
     return this.httpClient.get<Processo[]>(this.API)
     .pipe(
       first(),
-      delay(5000),
+      delay(1000),
       tap(processos => console.log(processos))
     );
   }
