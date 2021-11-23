@@ -11,11 +11,11 @@ import { Observable } from 'rxjs';
 })
 export class ProcessosComponent implements OnInit
 {
-  processos: Observable<Processo[]>;
+  processos$: Observable<Processo[]>;
   displayedColumns = ['numero', 'titulo']
 
   constructor(private processosService: ProcessosService) {
-    this.processos = this.processosService.list();
+    this.processos$ = this.processosService.list();
   }
 
   ngOnInit(): void {
